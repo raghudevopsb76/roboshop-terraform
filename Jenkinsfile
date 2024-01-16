@@ -21,7 +21,7 @@ pipeline {
         stage('DEV Env') {
           steps {
             dir('DEV') {
-              git branch: 'main', url: 'https://github.com/raghudevopsb76/expense-terraform'
+              git branch: 'main', url: 'https://github.com/raghudevopsb76/roboshop-terraform'
               sh 'terraform init -backend-config=env-dev/state.tfvars'
               sh 'terraform ${ACTION} -auto-approve -var-file=env-dev/main.tfvars'
             }
@@ -31,7 +31,7 @@ pipeline {
 //        stage('PROD Env') {
 //          steps {
 //            dir('PROD') {
-//              git branch: 'main', url: 'https://github.com/raghudevopsb76/expense-terraform'
+//              git branch: 'main', url: 'https://github.com/raghudevopsb76/roboshop-terraform'
 //              sh 'terraform init -backend-config=env-prod/state.tfvars'
 //              sh 'terraform ${ACTION} -auto-approve -var-file=env-prod/main.tfvars'
 //            }
