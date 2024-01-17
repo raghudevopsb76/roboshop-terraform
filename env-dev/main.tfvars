@@ -26,10 +26,10 @@ vpc = {
 
 rds = {
   main = {
-    rds_allocated_storage  = 20
-    rds_engine             = "mysql"
-    rds_engine_version     = "5.7.44"
-    rds_instance_class     = "db.t3.micro"
+    allocated_storage      = 20
+    engine                 = "mysql"
+    engine_version         = "5.7.44"
+    instance_class         = "db.t3.micro"
     parameter_group_family = "mysql5.7"
   }
 }
@@ -44,3 +44,12 @@ docdb = {
   }
 }
 
+elasticache = {
+  main = {
+    engine                 = "redis"
+    engine_version         = "6.2"
+    node_type              = "cache.t3.micro"
+    parameter_group_family = "default.redis6.x"
+    num_cache_nodes        = 1
+  }
+}
