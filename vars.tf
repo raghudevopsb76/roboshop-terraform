@@ -9,4 +9,5 @@ variable "rds" {}
 variable "route53_zone_id" {}
 variable "kms" {}
 variable "certificate_arn" {}
+variable "docdb" {}
 
