@@ -45,7 +45,7 @@ module "docdb" {
   for_each = var.docdb
   #  allocated_storage  = each.value["rds_allocated_storage"]
   engine = each.value["engine"]
-  #  engine_version     = each.value["rds_engine_version"]
+  engine_version     = each.value["engine_version"]
   #  instance_class     = each.value["rds_instance_class"]
   parameter_group_family = each.value["parameter_group_family"]
 
