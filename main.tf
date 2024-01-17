@@ -42,11 +42,11 @@ module "rds" {
 module "docdb" {
   source = "git::https://github.com/raghudevopsb76/tf-module-docdb.git"
 
-  for_each = var.docdb
-  #  allocated_storage  = each.value["rds_allocated_storage"]
-  engine = each.value["engine"]
-  engine_version     = each.value["engine_version"]
-  #  instance_class     = each.value["rds_instance_class"]
+  for_each               = var.docdb
+  instance_count         = each.value["instance_count"]
+  engine                 = each.value["engine"]
+  engine_version         = each.value["engine_version"]
+  instance_class         = each.value["instance_class"]
   parameter_group_family = each.value["parameter_group_family"]
 
   env  = var.env
