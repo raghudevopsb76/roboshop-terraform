@@ -32,8 +32,8 @@ module "rds" {
   tags = var.tags
   kms  = var.kms
 
-  subnets  = module.vpc.db_subnets
-  vpc_id   = module.vpc.vpc_id
+  subnets  = lookup(lookup(module.vpc, "main", null), "db_subnets", null)
+  vpc_id   = lookup(lookup(module.vpc, "main", null), "vpc_id", null)
   sg_cidrs = lookup(lookup(var.vpc, "main", null), "db_subnets", null)
 
 }
