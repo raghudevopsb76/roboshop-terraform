@@ -18,7 +18,7 @@ module "vpc" {
 }
 
 
-module "vpc" {
+module "rds" {
   source = "git::https://github.com/raghudevopsb76/tf-module-rds.git"
 
   for_each               = var.rds
