@@ -15,4 +15,5 @@ variable "bastion_cidrs" {}
 variable "prometheus_cidrs" {}
 variable "rabbitmq" {}
 variable "app" {}
+variable "alb" {}
 

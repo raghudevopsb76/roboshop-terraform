@@ -118,3 +118,22 @@ module "app" {
 
 }
 
+module "alb" {
+  source = "git::https://github.com/raghudevopsb76/tf-module-alb.git"
+
+  for_each        = var.alb
+  certificate_arn = each.value["certificate_arn"]
+  enable_https    = each.value["enable_https"]
+  ingress_ports   = each.value["ingress_ports"]
+  internal        = each.value["internal"]
+
+  type = each.key
+
+  env             = var.env
+  route53_zone_id = var.route53_zone_id
+  tags            = var.tags
+
+  vpc_id   = lookup(lookup(module.vpc, "main", null), "vpc_id", null)
+  subnets  = lookup(lookup(module.vpc, "main", null), each.value["subnet_name"], null)
+  sg_cidrs = lookup(lookup(var.vpc, "main", null), each.value["sg_cidrs"], null)
+}
