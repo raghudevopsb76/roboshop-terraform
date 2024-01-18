@@ -11,3 +11,7 @@ variable "kms" {}
 variable "certificate_arn" {}
 variable "docdb" {}
 variable "elasticache" {}
+variable "bastion_cidrs" {}
+variable "prometheus_cidrs" {}
+variable "rabbitmq" {}
+
