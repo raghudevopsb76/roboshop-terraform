@@ -111,7 +111,6 @@ module "app" {
   tags             = var.tags
   kms              = var.kms
   bastion_cidrs    = var.bastion_cidrs
-  route53_zone_id  = var.route53_zone_id
   prometheus_cidrs = var.prometheus_cidrs
 
   subnets  = lookup(lookup(module.vpc, "main", null), "app_subnets", null)
