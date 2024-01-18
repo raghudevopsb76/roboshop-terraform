@@ -49,7 +49,7 @@ elasticache = {
     engine                 = "redis"
     engine_version         = "6.2"
     node_type              = "cache.t3.micro"
-    parameter_group_family = "default.redis6.x"
+    parameter_group_family = "redis6.x"
     num_cache_nodes        = 1
   }
 }
