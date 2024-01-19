@@ -70,6 +70,7 @@ app = {
     app_subnet_name = "app_subnets"
     lb_subnet_name  = "app_subnets"
     alb_name        = "private"
+    priority        = 1
   }
   frontend = {
     instance_type   = "t3.small"
@@ -78,6 +79,7 @@ app = {
     app_subnet_name = "web_subnets"
     lb_subnet_name  = "public_subnets"
     alb_name        = "public"
+    priority        = 1
   }
   cart = {
     instance_type   = "t3.small"
@@ -86,6 +88,7 @@ app = {
     app_subnet_name = "app_subnets"
     lb_subnet_name  = "app_subnets"
     alb_name        = "private"
+    priority        = 2
   }
   user = {
     instance_type   = "t3.small"
@@ -94,6 +97,7 @@ app = {
     app_subnet_name = "app_subnets"
     lb_subnet_name  = "app_subnets"
     alb_name        = "private"
+    priority        = 3
   }
   shipping = {
     instance_type   = "t3.small"
@@ -102,6 +106,7 @@ app = {
     app_subnet_name = "app_subnets"
     lb_subnet_name  = "app_subnets"
     alb_name        = "private"
+    priority        = 4
   }
   payment = {
     instance_type   = "t3.small"
@@ -110,6 +115,7 @@ app = {
     app_subnet_name = "app_subnets"
     lb_subnet_name  = "app_subnets"
     alb_name        = "private"
+    priority        = 5
   }
   dispatch = {
     instance_type   = "t3.small"
@@ -118,6 +124,7 @@ app = {
     app_subnet_name = "app_subnets"
     lb_subnet_name  = "app_subnets"
     alb_name        = "private"
+    priority        = 6
   }
 }
 
