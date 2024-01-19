@@ -115,7 +115,8 @@ module "app" {
   subnets  = lookup(lookup(module.vpc, "main", null), each.value["app_subnet_name"], null)
   vpc_id   = lookup(lookup(module.vpc, "main", null), "vpc_id", null)
   sg_cidrs = lookup(lookup(var.vpc, "main", null), each.value["lb_subnet_name"], null)
-
+  alb_name = lookup(lookup(module.alb, each.value["lb_type"], null), "alb_name", null)
+  listener_arn = lookup(lookup(module.alb, each.value["lb_type"], null), "listener_arn", null)
 }
 
 module "alb" {
