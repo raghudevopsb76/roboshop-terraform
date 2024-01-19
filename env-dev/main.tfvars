@@ -118,23 +118,14 @@ app = {
 alb = {
   public = {
     certificate_arn = "arn:aws:acm:us-east-1:633788536644:certificate/f48fadb0-e24c-4370-90e8-d3718672a46e"
-    enable_https    = true
     internal        = false
     sg_cidrs        = "internet"
     subnet_name     = "public_subnets"
-    ingress_ports = {
-      http  = { port = 80 }
-      https = { port = 443 }
-    }
   }
   private = {
     certificate_arn = "arn:aws:acm:us-east-1:633788536644:certificate/f48fadb0-e24c-4370-90e8-d3718672a46e"
-    enable_https    = false
     internal        = true
     sg_cidrs        = "app_subnets"
     subnet_name     = "public_subnets"
-    ingress_ports = {
-      http = { port = 80 }
-    }
   }
 }

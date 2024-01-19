@@ -123,8 +123,6 @@ module "alb" {
 
   for_each        = var.alb
   certificate_arn = each.value["certificate_arn"]
-  enable_https    = each.value["enable_https"]
-  ingress_ports   = each.value["ingress_ports"]
   internal        = each.value["internal"]
 
   type = each.key
