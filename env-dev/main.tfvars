@@ -22,7 +22,6 @@ vpc = {
     app_subnets    = ["10.11.4.0/24", "10.11.5.0/24"]
     db_subnets     = ["10.11.6.0/24", "10.11.7.0/24"]
     azs            = ["us-east-1a", "us-east-1b"]
-    internet       = ["0.0.0.0/0"]
   }
 }
 
@@ -133,13 +132,13 @@ alb = {
   public = {
     certificate_arn = "arn:aws:acm:us-east-1:633788536644:certificate/f48fadb0-e24c-4370-90e8-d3718672a46e"
     internal        = false
-    sg_cidrs        = "internet"
+    sg_cidrs        = ["0.0.0.0/0"]
     subnet_name     = "public_subnets"
   }
   private = {
     certificate_arn = "arn:aws:acm:us-east-1:633788536644:certificate/f48fadb0-e24c-4370-90e8-d3718672a46e"
     internal        = true
-    sg_cidrs        = "app_subnets"
+    sg_cidrs        = ["10.11.2.0/24", "10.11.3.0/24", "10.11.4.0/24", "10.11.5.0/24"]
     subnet_name     = "public_subnets"
   }
 }
