@@ -139,6 +139,6 @@ alb = {
     certificate_arn = "arn:aws:acm:us-east-1:633788536644:certificate/f48fadb0-e24c-4370-90e8-d3718672a46e"
     internal        = true
     sg_cidrs        = ["10.11.2.0/24", "10.11.3.0/24", "10.11.4.0/24", "10.11.5.0/24"]
-    subnet_name     = "public_subnets"
+    subnet_name     = "app_subnets"
   }
 }
