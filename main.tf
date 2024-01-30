@@ -98,8 +98,8 @@ module "rabbitmq" {
 }
 
 module "app" {
-  depends_on = [module.alb, module.docdb, module.rds, module.elasticache, module.rabbitmq ]
-  source = "git::https://github.com/raghudevopsb76/tf-module-app.git"
+  depends_on = [module.alb, module.docdb, module.rds, module.elasticache, module.rabbitmq]
+  source     = "git::https://github.com/raghudevopsb76/tf-module-app.git"
 
   for_each       = var.app
   component      = each.key
@@ -136,7 +136,7 @@ module "alb" {
   route53_zone_id = var.route53_zone_id
   tags            = var.tags
 
-  vpc_id   = lookup(lookup(module.vpc, "main", null), "vpc_id", null)
-  subnets  = lookup(lookup(module.vpc, "main", null), each.value["subnet_name"], null)
+  vpc_id  = lookup(lookup(module.vpc, "main", null), "vpc_id", null)
+  subnets = lookup(lookup(module.vpc, "main", null), each.value["subnet_name"], null)
 
 }
