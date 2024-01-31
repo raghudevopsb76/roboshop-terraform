@@ -107,6 +107,7 @@ module "app" {
   instance_count = each.value["instance_count"]
   app_port       = each.value["app_port"]
   priority       = each.value["priority"]
+  dns_name       = lookup(each.value, "dns_name", null)
 
   env              = var.env
   tags             = var.tags

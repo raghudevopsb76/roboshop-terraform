@@ -79,6 +79,7 @@ app = {
     lb_subnet_name  = "public_subnets"
     alb_name        = "public"
     priority        = 1
+    dns_name        = "www"
   }
   cart = {
     instance_type   = "t3.small"
