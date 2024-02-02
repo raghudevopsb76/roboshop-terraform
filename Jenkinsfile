@@ -25,11 +25,11 @@ pipeline {
       }
     }
 
-    stage('Jenkins IP Update') {
-      steps {
-        build 'miscellaneous/jenkins-ip-update'
-      }
-    }
+//    stage('Jenkins IP Update') {
+//      steps {
+//        build 'miscellaneous/jenkins-ip-update'
+//      }
+//    }
 
     stage('TF Action') {
       parallel {
