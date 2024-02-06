@@ -100,7 +100,7 @@ app = {
     priority        = 3
   }
   shipping = {
-    instance_type   = "t3.medium"
+    instance_type   = "t3.large"
     instance_count  = 2
     app_port        = 8080
     app_subnet_name = "app_subnets"
