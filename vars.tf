@@ -16,5 +16,5 @@ variable "prometheus_cidrs" {}
 variable "rabbitmq" {}
 variable "app" {}
 variable "alb" {}
-
+variable "eks" {}
 

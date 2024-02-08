@@ -142,3 +142,7 @@ alb = {
     subnet_name     = "app_subnets"
   }
 }
+
+eks = {
+
+}
