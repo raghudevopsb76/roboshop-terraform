@@ -15,15 +15,15 @@ pipeline {
 
   stages {
 
-    stage('Parameter Store Update') {
-      steps {
-        dir('PS') {
-          git branch: 'main', url: 'https://github.com/raghudevopsb76/aws-parameter-store'
-          sh 'terraform init'
-          sh 'terraform apply -auto-approve'
-        }
-      }
-    }
+//    stage('Parameter Store Update') {
+//      steps {
+//        dir('PS') {
+//          git branch: 'main', url: 'https://github.com/raghudevopsb76/aws-parameter-store'
+//          sh 'terraform init'
+//          sh 'terraform apply -auto-approve'
+//        }
+//      }
+//    }
 
 //    stage('Jenkins IP Update') {
 //      steps {
